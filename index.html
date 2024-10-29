@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precios y Ganancias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Precios y Ganancias</h1>
+        <form id="calculadoraForm">
+            <label for="costoMateriaPrima">Costo de la materia prima:</label>
+            <input type="number" id="costoMateriaPrima" required step="0.01">
+
+            <label for="margenGanancia">Margen de ganancia (en decimal):</label>
+            <input type="number" id="margenGanancia" required step="0.01">
+
+            <label for="impuestos">Tasa de impuestos (en decimal):</label>
+            <input type="number" id="impuestos" required step="0.01">
+
+            <button type="submit">Calcular Precio Final</button>
+        </form>
+
+        <div id="resultadoPrecio" class="resultado"></div>
+
+        <div id="ventasEsperadasContainer" style="display: none;">
+            <label for="ventasEsperadas">Ventas esperadas:</label>
+            <input type="number" id="ventasEsperadas" required>
+            <button id="calcularGanancia">Calcular Ganancia Total</button>
+        </div>
+
+        <div id="resultadoGanancia" class="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
